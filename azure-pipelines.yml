@@ -40,7 +40,7 @@ stages:
     - script: |
         npm install -g webpack webpack-cli --save-dev
         npm install
-      displayName: 'npm install, run webpack'
+      displayName: 'npm install, npm build'
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
@@ -76,7 +76,3 @@ stages:
               packageForLinux: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               RuntimeStack: 'NODE|10.10'
               StartupCommand: 'npm run start'
-              ScriptType: 'Inline Script'
-              InlineScript: |
-                npm install
-                npm run build --if-present
