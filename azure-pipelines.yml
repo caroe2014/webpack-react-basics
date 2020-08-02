@@ -36,13 +36,7 @@ stages:
                 - task: NodeTool@0
                   inputs:
                     versionSpec: '10.x'
-                  displayName: 'Install Node.js'
-
-                - script: |
-                    npm install -g webpack webpack-cli --save-dev
-                    npm install
-                    npx webpack --config webpack.config.js
-                  displayName: 'npm install, run webpack'    
+                  displayName: 'Install Node.js'  
         - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
