@@ -39,7 +39,7 @@ stages:
         npm install -g webpack webpack-cli --save-dev
         npm install
         npx webpack --config webpack.config.js
-      displayName: 'npm install, run webpack'
+      displayName: 'npm install, run webpack, npm start'
           
     - task: ArchiveFiles@2
       displayName: 'Archive files'
