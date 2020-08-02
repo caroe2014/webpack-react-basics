@@ -22,3 +22,11 @@ steps:
     cat webpack.config.js
     npm build
   displayName: 'npm install, run webpack'
+
+- task: ArchiveFiles@2
+  displayName: 'Archive application'
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/dist'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
