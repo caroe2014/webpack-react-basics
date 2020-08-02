@@ -19,6 +19,6 @@ steps:
     npm install -g webpack webpack-cli babel-core --save-dev
     npm install
     npx webpack --config webpack.config.js
-    echo webpack.config.js
-    npm start
+    cat webpack.config.js
+    npm build
   displayName: 'npm install, run webpack'
