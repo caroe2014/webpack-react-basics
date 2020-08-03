@@ -23,7 +23,7 @@ steps:
 
 - script: |  
     cat webpack.config.js
-    npm run build
+    npm run build:prod
   displayName: 'npm run build'
 
 - task: ArchiveFiles@2
