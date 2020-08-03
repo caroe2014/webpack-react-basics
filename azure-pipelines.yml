@@ -34,7 +34,7 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'edgaroarm'
+    azureSubscription: 'edgaro'
     appType: webAppLinux
     appName: 'v-edcaroWebPackReact'
     package:  $(System.ArtifactsDirectory)**/*.zip
