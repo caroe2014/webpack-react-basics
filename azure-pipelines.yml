@@ -16,14 +16,14 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install -g webpack webpack-cli babel-core --save-dev
+    npm install -g webpack webpack-cli babel-core --save
     npm install
     npx webpack --config webpack.config.js
   displayName: 'npm install, run webpack'
 
 - script: |  
     cat webpack.config.js
-    npm run build
+    npm run build:prod
   displayName: 'npm run build'
 
 - task: ArchiveFiles@2
