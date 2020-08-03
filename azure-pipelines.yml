@@ -22,7 +22,7 @@ steps:
     npx webpack --config webpack.config.js
     echo ">>>>>>>  Finished WebPack config installation   <<<<<<<<<<<"
     cat webpack.config.js
-    npm build
+    npm run build
     echo ">>>>>>>  Finished npm build   <<<<<<<<<<<"
   displayName: 'npm install, run webpack'
 
