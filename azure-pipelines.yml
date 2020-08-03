@@ -31,3 +31,10 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'edgaroarm'
+    appType: webAppLinux
+    appName: 'v-edcaroWebPackReact'
+    package:  $(System.ArtifactsDirectory)**/*.zip
