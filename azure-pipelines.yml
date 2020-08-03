@@ -28,9 +28,12 @@ steps:
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: false
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+    verbose: true
+#- task: PublishBuildArtifacts@1
+#  displayName: 'Publish Artifact: drop'
 
 - task: AzureWebApp@1
   inputs:
