@@ -17,14 +17,14 @@ steps:
 
 - script: |
     npm install -g webpack webpack-cli babel-core --save-dev
-    echo ">>>>>>>  Finished WebPack installation   <<<<<<<<<<<"
     npm install
     npx webpack --config webpack.config.js
-    echo ">>>>>>>  Finished WebPack config installation   <<<<<<<<<<<"
+  displayName: 'npm install, run webpack'
+
+- script: |  
     cat webpack.config.js
     npm run build
-    echo ">>>>>>>  Finished npm build   <<<<<<<<<<<"
-  displayName: 'npm install, run webpack'
+  displayName: 'npm run build'
 
 - task: ArchiveFiles@2
   displayName: 'Archive application'
