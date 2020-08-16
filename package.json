@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build",
-    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
+    "build": "webpack -d && cp index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot --open",
     "build:prod": "webpack -p && cp src/index.html dist/index.html"
   },
   "keywords": [
@@ -144,6 +144,8 @@
     "node": "^12.12.0",
     "nodemon": "^1.17.3",
     "openurl": "^1.1.1",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",    
     "react-hot-loader": "^4.0.1",
     "react-test-renderer": "^16.3.2",
     "rimraf": "^2.6.2",
